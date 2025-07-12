@@ -1,0 +1,59 @@
+backward traversal in double linked list
+//
+void backtraversal(struct node*tail)
+{struct node*curr=tail;
+    if(curr==NULL)
+    {return curr;}
+    while(curr!=NULL)
+    { printf("%d",curr->data)
+        curr=curr->prev;}
+        
+}
+//
+insert a node at beggining in double linked list
+//
+(defination section)
+struct node{
+    int data;
+    struct node*prev;
+    struct node*next;
+}
+struct node*insertbegin(int data,struct node*head)
+{struct node*newnode=createnode(data);
+    newnode->next=head;
+    if(head!=NULL)
+    {
+    newnode->next->prev=newnode;
+    }
+}
+//
+insert a node at end in double linked list
+//
+struct node*insertend(int data,struct node*head)
+{ struct node*newnode=createnode(data);
+ if(head==NULL)
+  {head=newnode;}
+  else{
+      struct node*curr=head;
+      while(curr->next!=NULL)
+      {curr=curr->next;}}
+      curr->next=newnode;
+      newnode->prev=curr;
+      return head;
+  }
+}
+//
+insert node at any position in a double linked list
+//
+struct node*curr=head;
+for(i=0;i<pos-1 && curr!=NULL,i++)
+{
+    curr=curr->next;
+}
+newnode->prev=curr;
+newnode->next=curr->next;
+curr->prev=newnode;
+if(newnode->next!=NULL)
+{newnode->next->prev=newnode;}
+free(curr);
+return head;

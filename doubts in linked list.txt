@@ -1,0 +1,2 @@
+1.swapping pair wise
+2.removing duplicates

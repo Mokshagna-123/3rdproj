@@ -1,0 +1,54 @@
+delete a specific node in the circular linked list
+//
+struct node*delspecnode(struct node*last)
+{
+    if(last==NULL)
+    {
+        return NULL;
+    }
+    struct node*cur=last->next;
+    struct node*prev=last;
+  if(cur==last && cur->data==value)
+   {
+       free(cur);
+       return last;
+   }
+   if(cur->data==value)
+   {prev->next==cur->next;
+       free(cur);
+       return last;
+   }
+   while(cur->data!=value && cur!=last)
+   {
+       cur=cur->next;
+       prev=prev->next;
+       if(cur->data==value)
+       {  prev->next=cur->next;}
+       free(cur);
+       if(cur==last)
+        last=prev;
+   }
+   return last;
+}
+//
+to delete a node at the end in a circular linked list
+//
+struct node*delatend(struct node*last)
+{
+    struct node*head=last->next;
+    if(head==last)
+    {
+        free(last);
+        return NULL;
+    }
+    struct node*cur=head;
+    while(cur->next==last)
+    {
+        cur=cur->next;
+    }
+    cur->next=head;
+    free(last);
+    last=cur;
+    return last;
+}
+//

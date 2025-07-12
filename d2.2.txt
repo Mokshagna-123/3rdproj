@@ -1,0 +1,108 @@
+functions in stack
+//
+1)isFull()
+  int isFull(struct Stack*stack)
+  {return stack->top>=stack->cap-1;}
+ 2)isEmpty()
+ int isEmpty(struct Stack*stack)
+ {return stack->top<0;}
+3)deleteStack()
+void deleteStack(struct Stack*stack)
+{
+    free(stack->a);
+    free(stack);
+}
+4) push() 
+   struct  Stack*s=createstack(cap);
+    push(s,5);
+    int push(struct  Stack*stack,int x)
+    {
+        if(isFull(stack))
+        {
+            printf("stack overflow");
+            return 0;
+        }
+        else{
+            stack->a[++stack->top]=x;
+        return 1;}
+    }
+5)pop()
+int pop(struct Stack*stack)
+{if(isEmpty(stack))
+    {printf("stack underflow");
+        return 0;
+    }
+    else{
+        return stack->a[stack->top--];
+    }
+    //this gives the value of deleted stack//
+}
+6)peek()
+  int peek(struct Stack*stack)
+  {if(isEmpty(stack))
+      {printf("stack is empty");
+          return 0;
+      }
+      else{
+          return stack->a[stack->top];
+      }
+  }
+  //
+    implement a stack using a single linked list
+//
+1) declaring node
+    typedef struct Node{
+        int data;
+    struct Node*next;
+    }node;
+2)declaring stack
+  typedef struct Stack{
+      node*head;
+  }Stack;
+  3) initializing stack
+    void initialize(Stack*stack)
+    {stack->head=NULL;}
+4)isEmpty()
+ int isEmpty(Stack*stack)
+ {
+     if(stack->head==NULL)
+     {return 1;}
+     else
+     {return 0;}
+ }
+   5)pop()
+   void pop(Stack*stack)
+   {
+      if(isEmpty(*stack))
+      {printf("stack underflow");
+          return;
+      }
+      else{
+          node*temp=stack->head;
+          stack->head=stack->head->next;
+        
+      }
+   }
+ 6)push()
+   void push(Stack*stack,int x)
+   {
+       Node*temnode=createnode(x);
+       if(!temnode)
+       {printf("stack overflow");
+           return;
+       }
+       else{
+           temnode->next=stack->head;
+           stack->head=temnode;
+           free(temnode);
+       }
+   }
+ int main()
+ {
+    Stack stack;
+    initializie(&stack);
+    push(&stack,5);
+ }
+    
+    
+    
