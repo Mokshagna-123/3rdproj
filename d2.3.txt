@@ -1,6 +1,0 @@
-sprint function
-char infix[100];
-sprint(infix,"(%s%c%s)",operand1 ,c, operand2);
-here in this function the formated string "(%s%c%s)" is stored in the char array infix in that form 
-here the values of the %s%c%s can be passed on by the give data right to it
-so we can store the formatted string in the infix array
