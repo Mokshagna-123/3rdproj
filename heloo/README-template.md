@@ -13,7 +13,7 @@
 
 - Solution URL: https://github.com/Mokshagna-123/social-profile-links-template
 
-- Live Site URL: https://Mokshagna-123.github.io/social-profile-links-template/
+- Live Site URL: https://mokshagna-123.github.io/social-profile-links-template/
 
 ## My process
 
