@@ -11,9 +11,9 @@
 ## Overview
 ### Links
 
-- Solution URL: https://github.com/your-username/social-profile-links-template
+- Solution URL: https://github.com/Mokshagna-123/social-profile-links-template
 
-- Live Site URL: https://your-Mokshagna-123.github.io/social-profile-links-templae/
+- Live Site URL: https://Mokshagna-123.github.io/social-profile-links-template/
 
 ## My process
 
